@@ -1,0 +1,50 @@
+﻿@model Coyne_MIS4200.Models.Appoitment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appoitment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car.make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appoitmentDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appoitmentDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appoitmentPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appoitmentPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.appoitmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

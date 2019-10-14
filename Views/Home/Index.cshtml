@@ -4,25 +4,38 @@
 
 <div class="jumbotron">
     <h2>MIS 4200</h2>
-    <p > This is a demo site for MIS 4200</p>
+    <p > This is up to date for SD3</p>
+    <div class=" dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Dropdown Homepage
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="https://www.ohio.edu/">Ohio</a></li>
+            <li><a href="https://ohiocoblms.azurewebsites.net/login.aspx?ReturnUrl=%2flearn%2fforum.aspx">CoB LMS</a></li>
+            <li><a href="https://www.ohio.edu/admissions/">Future Students at OU</a></li>
+        </ul>
+    </div>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Intro</h2>
+        <h2>RB15</h2>
         <p>
-            This is an intro to MVC development in Visual Studio.
+            @Html.ActionLink("Cars", "Index", "Cars") <br />
+            @Html.ActionLink("Owners", "Index", "Owners")<br />
+            @Html.ActionLink("Appointments", "Index", "Appointments")
         </p>
 
     </div>
     <div class="col-md-4">
-        <h2>MVC</h2>
-        <p>This course introduces the Model-View-Controller development pattern.</p>
+        <h2>Max Verstappen</h2>
+        <p>Driver #1 - Max Verstappen. Max Emilian Verstappen is a Belgian-Dutch racing driver who competes under the Dutch flag in Formula One with Red Bull Racing. At the 2015 Australian Grand Prix, when he was aged 17 years, 166 days, he became the youngest driver to compete in Formula 1.</p>
        
     </div>
     <div class="col-md-4">
-        <h2>GitHub</h2>
-        <p>This course also introduces gitHub.</p>
+        <h2>Alex Albon</h2>
+        <p>Driver #2 - Alex Albon. Alexander Albon Ansusinha is a Thai-British racing driver, currently driving in Formula One for Red Bull Racing under the Thai flag. He raced for Toro Rosso for the first half of 2019, before being promoted to Red Bull for the second half, replacing Pierre Gasly who has returned to Toro Rosso.</p>
        
     </div>
 </div>

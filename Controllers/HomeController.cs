@@ -15,7 +15,7 @@ namespace Coyne_MIS4200.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Aston Martin Redbull Racing Formula 1 Team";
 
             return View();
         }

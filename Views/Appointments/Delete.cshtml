@@ -1,0 +1,56 @@
+﻿@model Coyne_MIS4200.Models.Appoitment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Appoitment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car.make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appoitmentDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appoitmentDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appoitmentPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appoitmentPrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

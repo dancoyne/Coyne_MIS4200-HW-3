@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Coyne_MIS4200.Models.Appoitment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Car.make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.appoitmentDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.appoitmentPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Car.make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.appoitmentDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.appoitmentPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.appoitmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.appoitmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.appoitmentID })
+        </td>
+    </tr>
+}
+
+</table>
+<span class=" glyphicon glyphicon-home"></span> -
+<a class="btn btn-primary" @Html.ActionLink("Home", "Index", "Home")</a>
